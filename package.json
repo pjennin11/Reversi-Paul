@@ -4,7 +4,8 @@
   "description": "this is a web version of the game Reversi",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,6 @@
   "dependencies": {
     "node-static": "^0.7.11",
     "socket.io": "^4.6.1"
-  }
+  },
+  "devDependencies": {}
 }
