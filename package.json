@@ -1,0 +1,25 @@
+{
+  "name": "pjennings",
+  "version": "0.0.1",
+  "description": "this is a web version of the game Reversi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/pjennin11/Reversi-Paul.git)"
+  },
+  "keywords": [
+    "reversi",
+    "pjennin11",
+    "hci",
+    "technology"
+  ],
+  "author": "Paul Jennings (pjennin1@uci.edu)",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "socket.io": "^4.6.1"
+  }
+}
