@@ -1,25 +1,49 @@
 {
-  "name": "pjennings",
-  "version": "0.0.1",
-  "description": "this is a web version of the game Reversi",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "node-static",
+  "description": "simple, compliant file streaming module for node",
+  "url": "http://github.com/cloudhead/node-static",
+  "keywords": [
+    "http",
+    "static",
+    "file",
+    "server"
+  ],
+  "author": "Alexis Sellier <alexis@cloudhead.io>",
+  "contributors": [
+    "Pablo Cantero <pablo@pablocantero.com>",
+    "Ionică Bizău <bizauionica@gmail.com>"
+  ],
   "repository": {
     "type": "git",
-    "url": "(https://github.com/pjennin11/Reversi-Paul.git)"
+    "url": "http://github.com/cloudhead/node-static"
   },
-  "keywords": [
-    "reversi",
-    "pjennin11",
-    "hci",
-    "technology"
-  ],
-  "author": "Paul Jennings (pjennin1@uci.edu)",
-  "license": "GPL-3.0",
+  "main": "./lib/node-static",
+  "scripts": {
+    "test": "vows --spec --isolate"
+  },
+  "bin": {
+    "static": "bin/cli.js"
+  },
+  "license": "MIT",
   "dependencies": {
-    "node-static": "^0.7.11",
-    "socket.io": "^4.6.1"
+    "optimist": ">=0.3.4",
+    "colors": ">=0.6.0",
+    "mime": "^1.2.9"
+  },
+  "devDependencies": {
+    "request": "latest",
+    "vows": "latest"
+  },
+  "version": "0.7.11",
+  "engines": {
+    "node": ">= 0.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/cloudhead/node-static/issues"
+  },
+  "homepage": "https://github.com/cloudhead/node-static",
+  "directories": {
+    "example": "examples",
+    "test": "test"
   }
 }
