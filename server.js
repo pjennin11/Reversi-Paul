@@ -22,7 +22,7 @@ let app = http.createServer(
     function(request,reponse){
         request.addListener('end',
             function(){
-                file.serve(request,response);
+                file.serve(request, response);
             }
         ).resume();
     }
