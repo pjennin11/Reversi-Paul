@@ -82,7 +82,7 @@ socket.on('join_room', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a payload';
-        socket.emit('join_room_response',response);
+        io.to(room).emit('join_room_response',response);
         serverLog('join_room command failed', JSON.stringify(response));
         return;
     }
@@ -92,7 +92,7 @@ socket.on('join_room', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a valid room to join';
-        socket.emit('join_room_response',response);
+        io.to(room).emit('join_room_response',response);
         serverLog('join_room command failed', JSON.stringify(response));
         return;
     }
@@ -162,7 +162,7 @@ socket.on('send_chat_message', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a payload';
-        socket.emit('send_chat_message_response',response);
+        io.to(room).emit('send_chat_message_response',response);
         serverLog('send_chat_message command failed', JSON.stringify(response));
         return;
     }
@@ -173,7 +173,7 @@ socket.on('send_chat_message', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a valid room to message';
-        socket.emit('send_chat_message_response',response);
+        io.to(room).emit('send_chat_message_response',response);
         serverLog('send_chat_message command failed', JSON.stringify(response));
         return;
     }
