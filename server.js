@@ -100,7 +100,7 @@ socket.on('join_room', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a valid username to join the chat room';
-        socket.emit('join_room_response',response);
+        io.to(room).emit('join_room_response',response);
         serverLog('join_room command failed', JSON.stringify(response));
         return;
     }
@@ -116,7 +116,7 @@ socket.on('join_room', (payload) => {
                 response = {};
                 response.result = 'fail';
                 response.message = 'Server internal error joining chat room';
-                socket.emit('join_room_response',response);
+                io.to(room).emit('join_room_response',response);
                 serverLog('join_room command failed', JSON.stringify(response));
             }
             /* Socket did join room */
@@ -126,7 +126,7 @@ socket.on('join_room', (payload) => {
                 response.room = room;
                 response.username = username;
                 response.count = sockets.length;
-                socket.emit('join_room_response',response);
+                io.to(room).emit('join_room_response',response);
                 /* Tell everyone that a new user has joined the chat room */
                 io.of('/').to(room).emit('join_room_response',response);
                 serverLog('join_room succeeded', JSON.stringify(response));
@@ -181,7 +181,7 @@ socket.on('send_chat_message', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a valid username as a message source';
-        socket.emit('send_chat_message',response);
+        io.to(room).emit('send_chat_message',response);
         serverLog('send_chat_message command failed', JSON.stringify(response));
         return;
     }
@@ -189,7 +189,7 @@ socket.on('send_chat_message', (payload) => {
         response = {};
         response.result = 'fail';
         response.message = 'client did not send a valid message';
-        socket.emit('send_chat_message',response);
+        io.to(room).emit('send_chat_message',response);
         serverLog('send_chat_message command failed', JSON.stringify(response));
         return;
     }
