@@ -101,10 +101,17 @@ socket.on('join_room_response', (payload) => {
 })
 
 socket.on('player_disconnected', (payload) => {
-    if ((typeof payload == 'undefined') || (payload === null)) {
-        console.log('Server did not send a payload');
-        return;
+    const { socket_id } = payload;
+  
+    // Remove the disconnected player from the players array
+    players = players.filter((player) => player.socket_id !== socket_id);
+
+    // Hide the disconnected player's DOM elements
+    const playerElement = document.getElementById(`socket_${socket_id}`);
+    if (playerElement) {
+        playerElement.remove();
     }
+});
 
 if(payload.socket_id === socket.id){
     return;
