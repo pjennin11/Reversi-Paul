@@ -112,7 +112,7 @@ if(payload.socket_id === socket.id){
 
 let domElements = $('.socket_'+payload.socket_id);
 if(domElements.length !== 0){
-    domElements.hid("fade", 500);
+    domElements.hide("fade", 500);
 }
 
 
