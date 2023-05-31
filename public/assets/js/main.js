@@ -110,7 +110,7 @@ if(payload.socket_id === socket.id){
     return;
 }
 
-let domElements = $('.socket_'+payload.socket_id);
+let domElements = $('.socket_' + payload.socket_id);
 if(domElements.length !== 0){
     domElements.hide("fade", 500);
 }
