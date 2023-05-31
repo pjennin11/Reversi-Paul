@@ -122,7 +122,7 @@ if(domElements.length !== 0){
     newNode.hide();
     $('#messages').prepend(newNode);
     newNode.show("fade", 500);
-});
+})
 
 function sendChatMessage(){
     let request = {};
