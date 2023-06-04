@@ -307,7 +307,7 @@ io.on("connection", (socket) => {
           serverLog("uninvite command failed", JSON.stringify(response));
           return;
         } else {
-        /* Uninvitee is in the room room */
+          /* Uninvitee is in the room room */
           response = {
             result: "success",
             socket_id: requested_user,
@@ -399,7 +399,7 @@ io.on("connection", (socket) => {
           serverLog("game_start command failed", JSON.stringify(response));
           return;
         } else {
-        /* Engaged player is in the room room */
+          /* Engaged player is in the room room */
           let game_id = Math.floor(1 + Math.random() * 0x100000).toString(16);
           response = {
             result: "success",
