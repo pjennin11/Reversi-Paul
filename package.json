@@ -4,8 +4,7 @@
   "description": "this is a web version of the game Reversi",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,8 +19,8 @@
   "author": "Paul Jennings (pjennin1@uci.edu)",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "node": "^20.2.0",
     "node-static": "^0.7.11",
     "socket.io": "^4.6.1"
-  },
-  "devDependencies": {}
+  }
 }
