@@ -32,5 +32,5 @@ table#game_board td {
 }
 
 td.hovered_over:hover {
-    background-image: url('/assets/images/EMPTYFinal.gif');
+    background-image: url('/assets/images/TransparentFINAL.gif');
 }
