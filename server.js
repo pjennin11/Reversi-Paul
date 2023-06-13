@@ -607,13 +607,13 @@ io.on("connection", (socket) => {
       game.board[row][column] = 'w';
       flip_tokens('w', row, column, game.board);
       game.whose_turn = 'black';
-      game.legal_moves = calculate_legal_moves('b', game.board)
+      game.legal_moves = calculate_legal_moves('b', game.board);
     }
     else if (color === 'black') {
       game.board[row][column] = 'b';
       flip_tokens('b', row, column, game.board);
       game.whose_turn = 'white';
-      game.legal_moves = calculate_legal_moves('w', game.board)
+      game.legal_moves = calculate_legal_moves('w', game.board);
     }
 
     let d = new Date();
@@ -671,10 +671,10 @@ function check_line_match(color, dr, dc, r, c, board) {
     return false;
   }
   // Check to make sure we aren't going to walk off the board
-  if ((r + dr + dr < 0) || (r + dr + dr > 7)) {
+  if ((r + dr < 0) || (r + dr > 7)) {
     return false;
   }
-  if ((c + dc + dc < 0) || (c + dc + dc > 7)) {
+  if ((c + dc < 0) || (c + dc > 7)) {
     return false;
   }
 
@@ -769,7 +769,7 @@ function flip_line(who, dr, dc, r, c, board) {
     return false;
   }
   if (board[r + dr][c + dc] === who) {
-    return false;
+    return true;
   }
   else {
     if (flip_line(who, dr, dc, r + dr, c + dc, board)) {
