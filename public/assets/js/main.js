@@ -40,7 +40,7 @@ socket.on("log", function (array) {
 
 function makeInviteButton(socket_id) {
   let newHTML =
-    "<button type='button' class='btn-outline-primary'>Invite</button>";
+    "<button type='button' class='btn-outline-dark'>Invite</button>";
   let newNode = $(newHTML);
   newNode.click(() => {
     let payload = {
@@ -57,7 +57,7 @@ function makeInviteButton(socket_id) {
 
 function makeInvitedButton(socket_id) {
   let newHTML =
-    "<button type='button' class='btn-primary'>Invited</button>";
+    "<button type='button' class='btn-dark'>Invited</button>";
   let newNode = $(newHTML);
   newNode.click(() => {
     let payload = {
