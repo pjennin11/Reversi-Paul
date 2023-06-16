@@ -15,7 +15,7 @@ body {
 .chat_message {
     font-size: 125%;
     margin: 1px 1px 1px 1px;
-    color: rgb(0, 0, 0);
+    color: rgb(186, 38, 38);
 }
 
 table#game_board {
